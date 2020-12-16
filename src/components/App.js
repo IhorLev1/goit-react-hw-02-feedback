@@ -1,9 +1,11 @@
 import { Component } from 'react';
-import FeedbackOptions from './FeedbackOptions';
-import Section from './Section';
-import Statistics from './Statistics';
-import Notification from './Notification';
-import styles from './css/Container.module.css';
+
+import FeedbackOptions from './Feedback/FeedbackOptions';
+import Section from './Section/Section';
+import Statistics from './Statistic/Statistics';
+import Notification from './Feedback/Notification';
+
+import s from './Feedback/Container.module.css';
 
 export default class App extends Component {
   state = {
@@ -32,7 +34,7 @@ export default class App extends Component {
     const total = this.countTotalFeedback();
     const percent = this.countPositiveFeedbackPercentage();
     return (
-      <div className={styles.container}>
+      <div className={s.container}>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={['good', 'neutral', 'bad']}

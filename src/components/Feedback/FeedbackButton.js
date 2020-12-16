@@ -1,13 +1,8 @@
 import PropTypes from 'prop-types';
-import styles from './css/Button.module.css';
+import s from './Button.module.css';
 
 const FeedbackButton = ({ name, callback }) => (
-  <button
-    className={styles.button}
-    name={name}
-    type="button"
-    onClick={callback}
-  >
+  <button className={s.button} name={name} type="button" onClick={callback}>
     {name}
   </button>
 );
